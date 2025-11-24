@@ -1,0 +1,40 @@
+ABACAXI
+Fruta tropical com coroa e polpa amarelinha.
+90
+8
+MELANCIA
+Fruta grande de polpa vermelha e sementes pretas.
+120
+10
+PERA
+Fruta de formato de gota, textura macia.
+90
+8
+MANGA
+Fruta doce amarela ou alaranjada.
+90
+8
+BANANA
+Fruta alongada, rica em potássio.
+90
+8
+UVA
+Fruta pequena em cachos.
+80
+7
+KIWI
+Fruta marrom por fora e verde por dentro.
+90
+8
+MORANGO
+Fruta vermelha pequena e saborosa.
+90
+8
+TANGERINA
+Fruta cítrica fácil de descascar.
+90
+8
+GOIABA
+Fruta de aroma marcante e polpa rosada.
+90
+8
