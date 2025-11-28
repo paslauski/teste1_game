@@ -14,21 +14,21 @@ namespace teste1
 {
     public partial class FormJogo : Form
     {
-        // palavra e meta
+        // palavra
         string palavraSecreta = "";
-        char[] palavraRevelada; // guarda os caracteres revelados / '_' / ' '
+        char[] palavraRevelada; //muda os _ para letras acertadas
         string dica = "";
         int tempoMaximo = 0;
         int tentativasMax = 0;
 
-        // estado da partida
+        // requesito do escopo - estados do jogo
         int tempoRestante = 0;
         int tentativasRestantes = 0;
         int acertosCount = 0; // total de letras acertadas
         int errosCount = 0;   // total de erros (para o boneco)
         int pontos = 0;
 
-        // controles auxiliares
+        // controle de letras usadas
         List<char> letrasUsadas = new List<char>();
         Random rnd = new Random();
 
@@ -36,8 +36,8 @@ namespace teste1
 
         System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
 
-        // número máximo de erros que compõem as 7 imagens (0..6)
-        const int MAX_ERROS = 6; // forca0.png ... forca6.png
+        // número max de erros
+        const int MAX_ERROS = 6; // forca0.png->forca6.png
 
         public FormJogo()
         {
@@ -56,25 +56,25 @@ namespace teste1
             this.StartPosition = FormStartPosition.CenterScreen;
             this.WindowState = FormWindowState.Maximized;
 
-            // Enter aciona btnVerificar
+            // Enter - btnVerificar
             this.AcceptButton = btnVerificar;
 
-            // Carregar primeira palavra e estado
+            // Carregar primeira palavra
             CarregarPalavra();
 
-            // Timer de jogo
+            // Timer 
             timer.Interval = 1000;
             timer.Tick += Timer_Tick;
             timer.Start();
 
-            // Ajustar centralização simples ao redimensionar (se quiser melhorar, posso ajustar)
+            //centralização ao redimensionar a tela
             this.Resize += (s, ev) => CentralizarControles();
             CentralizarControles();
         }
 
         private void CentralizarControles()
         {
-            // centraliza lblPalavra e pbForca num posicionamento básico
+            // centraliza lblPalavra e pbForca
             try
             {
                 if (this.Controls.ContainsKey("lblPalavra"))
@@ -86,7 +86,7 @@ namespace teste1
                 if (this.Controls.ContainsKey("pbForca"))
                 {
                     PictureBox pb = this.Controls["pbForca"] as PictureBox;
-                    // posiciona a forca acima da palavra se couber
+                    // posiciona a forca abaixo da palavra
                     pb.Left = (this.ClientSize.Width - pb.Width) / 2;
                 }
 
@@ -98,7 +98,7 @@ namespace teste1
             }
             catch
             {
-                // se algo não existir no designer, não quebra
+                // se algo não existir no designer, não quebra o jogo
             }
         }
 
@@ -120,14 +120,14 @@ namespace teste1
                 return;
             }
 
-            // monta lista de índices (cada entrada ocupa 4 linhas)
+            // monta lista de índices 
             List<int> indices = new List<int>();
             for (int i = 0; i <= linhas.Length - 4; i += 4) indices.Add(i);
 
             int idx = rnd.Next(indices.Count);
             int inicio = indices[idx];
 
-            // normaliza palavra (remove acentos) e converte para maiúsculas
+            // remove acentos e converte para maiúsculas
             palavraSecreta = RemoverAcentos(linhas[inicio].Trim()).ToUpper();
             dica = linhas[inicio + 1].Trim();
 
@@ -137,7 +137,7 @@ namespace teste1
             if (!int.TryParse(linhas[inicio + 2].Trim(), out tempoArquivo)) tempoArquivo = 60;
             if (!int.TryParse(linhas[inicio + 3].Trim(), out tentativasArquivo)) tentativasArquivo = 10;
 
-            // calcula tentativas baseadas no tamanho da palavra (somente letras, sem espaços)
+            // calcula tentativas baseadas no tamanho da palavra 
             int letrasValidas = palavraSecreta.Count(c => !char.IsWhiteSpace(c));
             // regra: pelo menos (letras + 3) tentativas, mas respeita o valor mínimo do arquivo
             int tentativasBase = Math.Max(letrasValidas + 3, tentativasArquivo);
@@ -157,8 +157,6 @@ namespace teste1
                 // reduz um pouco o total de tentativas, mas nunca abaixo de 3
                 tentativasMax = Math.Max(3, tentativasMax - 2);
             }
-
-            // nota: o limite de ERROS para o boneco permanece fixo em MAX_ERROS (ex: 6 -> 7 imagens)
             // inicializa estados
             palavraRevelada = new char[palavraSecreta.Length];
             for (int i = 0; i < palavraSecreta.Length; i++)
@@ -173,7 +171,7 @@ namespace teste1
             tentativasRestantes = tentativasMax;
 
             AtualizarTelaInicial();
-            AtualizarBoneco(); // exibe forca0.png inicialmente
+            AtualizarBoneco(); // exibe forca0.png 
         }
 
         private void AtualizarTelaInicial()
@@ -248,7 +246,7 @@ namespace teste1
                 return;
             }
 
-            // registra a tentativa: cada palpite reduz o total de tentativas (regra 7.3)
+            // registra a tentativa
             letrasUsadas.Add(letra);
             tentativasRestantes--;
             if (this.Controls.ContainsKey("lblTentativas")) lblTentativas.Text = "TENTATIVAS: " + tentativasRestantes;
@@ -297,7 +295,7 @@ namespace teste1
                 return;
             }
 
-            // prepara próximo input
+            // prepara prox input
             txtLetra.Text = "";
             txtLetra.Focus();
         }
@@ -327,7 +325,7 @@ namespace teste1
             {
                 try
                 {
-                    // libera imagem anterior (para evitar lock) - recria a partir de stream
+                    // libera imagem anterior 
                     using (FileStream fs = new FileStream(caminho, FileMode.Open, FileAccess.Read))
                     {
                         Image img = Image.FromStream(fs);
@@ -351,8 +349,8 @@ namespace teste1
 
         private void MostrarFim(string mensagem)
         {
-            // resumo final (7.2)
-            string palavraOriginal = palavraSecreta; // palavra já sem acentos
+            // resumo
+            string palavraOriginal = palavraSecreta; 
             string resumo = $"{mensagem}\n\nPalavra: {palavraOriginal}\nAcertos: {acertosCount}\nErros: {errosCount}\nTentativas restantes: {tentativasRestantes}\nPontos: {pontos}";
 
             MessageBox.Show(resumo, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -365,7 +363,7 @@ namespace teste1
             }
             catch
             {
-                // se FormMenu não existir ou tiver outro construtor, apenas fecha
+                // se FormMenu não existir, apenas fecha
             }
             this.Close();
         }
@@ -391,12 +389,7 @@ namespace teste1
             }
         }
 
-        private void lblDica_Click(object sender, EventArgs e)
-        {
-            // vazio - se quiser mostrar ajuda ao clicar, implementa aqui
-        }
-
-        // Função para remover acentos e normalizar strings
+        // remover acentos e normalizar strings
         private string RemoverAcentos(string texto)
         {
             if (string.IsNullOrWhiteSpace(texto)) return texto;
