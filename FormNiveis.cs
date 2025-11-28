@@ -50,5 +50,13 @@ namespace teste1
             jogo.Show();
             this.Close();
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            FormMenu menu = new FormMenu();
+            menu.Show();
+            this.Close();
+
+        }
     }
 }

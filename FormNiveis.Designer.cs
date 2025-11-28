@@ -33,17 +33,18 @@
             this.btnMedio = new System.Windows.Forms.Button();
             this.btnDificil = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.lblDescricaoNivel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Snap ITC", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(212, 113);
+            this.label1.Location = new System.Drawing.Point(193, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(309, 32);
+            this.label1.Size = new System.Drawing.Size(411, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "SELECIONE O NÍVEL";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -51,9 +52,9 @@
             // btnFacil
             // 
             this.btnFacil.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnFacil.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.btnFacil.Font = new System.Drawing.Font("Kristen ITC", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFacil.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnFacil.Location = new System.Drawing.Point(232, 186);
+            this.btnFacil.Location = new System.Drawing.Point(274, 153);
             this.btnFacil.Name = "btnFacil";
             this.btnFacil.Size = new System.Drawing.Size(274, 62);
             this.btnFacil.TabIndex = 5;
@@ -64,9 +65,9 @@
             // btnMedio
             // 
             this.btnMedio.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnMedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.btnMedio.Font = new System.Drawing.Font("Kristen ITC", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMedio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnMedio.Location = new System.Drawing.Point(232, 249);
+            this.btnMedio.Location = new System.Drawing.Point(274, 216);
             this.btnMedio.Name = "btnMedio";
             this.btnMedio.Size = new System.Drawing.Size(274, 69);
             this.btnMedio.TabIndex = 4;
@@ -77,9 +78,9 @@
             // btnDificil
             // 
             this.btnDificil.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDificil.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.btnDificil.Font = new System.Drawing.Font("Kristen ITC", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDificil.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDificil.Location = new System.Drawing.Point(232, 319);
+            this.btnDificil.Location = new System.Drawing.Point(274, 286);
             this.btnDificil.Name = "btnDificil";
             this.btnDificil.Size = new System.Drawing.Size(274, 62);
             this.btnDificil.TabIndex = 3;
@@ -89,12 +90,26 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(27, 405);
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Location = new System.Drawing.Point(754, 505);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(85, 27);
+            this.btnVoltar.Size = new System.Drawing.Size(88, 36);
             this.btnVoltar.TabIndex = 6;
-            this.btnVoltar.Text = "VOLTAR";
+            this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // lblDescricaoNivel
+            // 
+            this.lblDescricaoNivel.AutoSize = true;
+            this.lblDescricaoNivel.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricaoNivel.Location = new System.Drawing.Point(97, 381);
+            this.lblDescricaoNivel.Name = "lblDescricaoNivel";
+            this.lblDescricaoNivel.Size = new System.Drawing.Size(676, 84);
+            this.lblDescricaoNivel.TabIndex = 7;
+            this.lblDescricaoNivel.Text = "🟢 Fácil – mais tempo (+20s) e mais tentativas (+3)\n🟡 Médio – valores padrões, e" +
+    "quilíbrio ideal\n🔴 Difícil – menos tempo (-20s) e menos tentativas (-2), maior d" +
+    "esafio";
             // 
             // FormNiveis
             // 
@@ -102,6 +117,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(882, 553);
+            this.Controls.Add(this.lblDescricaoNivel);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnFacil);
             this.Controls.Add(this.btnMedio);
@@ -124,5 +140,6 @@
         private System.Windows.Forms.Button btnMedio;
         private System.Windows.Forms.Button btnDificil;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Label lblDescricaoNivel;
     }
 }

@@ -15,7 +15,7 @@ Fruta doce amarela ou alaranjada.
 90
 8
 BANANA
-Fruta alongada, rica em potássio.
+Fruta alongada, rica em potassio.
 90
 8
 UVA
@@ -31,7 +31,7 @@ Fruta vermelha pequena e saborosa.
 90
 8
 TANGERINA
-Fruta cítrica fácil de descascar.
+Fruta citrica facil de descascar.
 90
 8
 GOIABA
