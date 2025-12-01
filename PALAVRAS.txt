@@ -1,40 +1,148 @@
 ABACAXI
-Fruta tropical com coroa e polpa amarelinha.
+fruta tropical com coroa e polpa amarelinha.
 90
 8
 MELANCIA
-Fruta grande de polpa vermelha e sementes pretas.
+fruta grande de polpa vermelha e sementes pretas.
 120
 10
 PERA
-Fruta de formato de gota, textura macia.
+fruta de formato de gota, textura macia.
 90
 8
 MANGA
-Fruta doce amarela ou alaranjada.
+fruta doce amarela ou alaranjada.
 90
 8
 BANANA
-Fruta alongada, rica em potassio.
+fruta alongada, rica em potássio.
 90
 8
 UVA
-Fruta pequena em cachos.
+fruta pequena em cachos.
 80
 7
 KIWI
-Fruta marrom por fora e verde por dentro.
+fruta marrom por fora e verde por dentro.
 90
 8
 MORANGO
-Fruta vermelha pequena e saborosa.
+fruta vermelha pequena e saborosa.
 90
 8
 TANGERINA
-Fruta citrica facil de descascar.
+fruta cítrica fácil de descascar.
 90
 8
 GOIABA
-Fruta de aroma marcante e polpa rosada.
+fruta de aroma marcante e polpa rosada.
+90
+8
+ABACATE
+fruta cremosa rica em gorduras boas.
+100
+9
+CAJU
+fruta suculenta usada para sucos e doces.
+90
+8
+CARAMBOLA
+fruta em formato de estrela quando cortada.
+100
+8
+AMORA
+frutinha roxa pequena e levemente ácida.
+90
+8
+FRAMBOESA
+fruta vermelha delicada e saborosa.
+90
+8
+GRAVIOLA
+fruta grande de sabor doce-azedo e polpa branca.
+120
+10
+MARACUJA
+fruta amarela usada em sucos e sobremesas.
+90
+8
+PITAYA
+fruta exótica com casca rosa e polpa cheia de sementes.
+100
+8
+CAQUI
+fruta doce de casca fina e polpa macia.
+90
+7
+JABUTICABA
+fruta pequena roxa que nasce no tronco da árvore.
+100
+8
+MAMÃO
+fruta alaranjada de textura macia.
+90
+8
+LARANJA
+fruta cítrica rica em vitamina c.
+90
+8
+LIMAO
+fruta cítrica muito ácida usada em bebidas.
+80
+7
+COCO
+fruta tropical com água refrescante e polpa branca.
+120
+10
+ROMA
+fruta cheia de sementes vermelhas suculentas.
+90
+8
+FIGO
+fruta doce e macia de casca arroxeada.
+90
+7
+ACEROLA
+fruta pequena extremamente rica em vitamina c.
+80
+7
+PESSEGO
+fruta doce e macia com casca aveludada.
+90
+8
+JACA
+fruta grande com gomos amarelos e cheiro marcante.
+120
+10
+MEXERICA
+fruta cítrica pequena e fácil de descascar.
+90
+8
+CUPUACU
+fruta amazônica com polpa branca usada em doces e sucos.
+120
+10
+PITANGA
+fruta vermelha pequena e muito aromática.
+80
+7
+TAMARINDO
+fruta marrom de sabor doce e azedo.
+100
+8
+LICHIA
+fruta de casca vermelha e polpa translúcida.
+100
+8
+CARNAUBA
+fruta pequena da palmeira carnaúba.
+90
+7
+CEREJA
+fruta pequena vermelha muito doce.
+90
+8
+AMEIXA
+fruta roxa de polpa doce.
 90
 8

@@ -15,48 +15,37 @@ namespace teste1
         public FormNiveis()
         {
             InitializeComponent();
-        }
-
-        private void FormNiveis_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        }    
 
         private void btnFacil_Click(object sender, EventArgs e)
         {
             FormJogo.nivel = "facil";
             FormJogo jogo = new FormJogo();
             jogo.Show();
-            this.Close();
+            this.Close(); // fecha tela de níveis
         }
 
         private void btnMedio_Click(object sender, EventArgs e)
         {
             FormJogo.nivel = "medio";
-            FormJogo jogo = new FormJogo();
+            FormJogo jogo = new FormJogo(); // abre jogo no nível escolhido
             jogo.Show();
-            this.Close();
+            this.Close(); // fecha tela atual
         }
 
         private void btnDificil_Click(object sender, EventArgs e)
         {
-            FormJogo.nivel = "dificil";
-            FormJogo jogo = new FormJogo();
+            FormJogo.nivel = "dificil"; 
+            FormJogo jogo = new FormJogo(); 
             jogo.Show();
-            this.Close();
+            this.Close(); 
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            FormMenu menu = new FormMenu();
-            menu.Show();
-            this.Close();
-
+            FormMenu menu = new FormMenu(); // cria tela do menu
+            menu.Show(); // abre o menu
+            this.Close(); // fecha tela de níveis
         }
     }
 }

@@ -14,46 +14,32 @@ namespace teste1
     {
         public FormMenu()
         {
-            InitializeComponent();
+            InitializeComponent(); // inicializa os componentes gráficos da tela do menu
         }
 
-        private void BTN_NIVEIS_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormMenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormMenu_Load_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void BTN_JOGAR_Click(object sender, EventArgs e)
         {
-            FormJogo jogo = new FormJogo();
-            jogo.Show();
-            this.Hide();
+            FormJogo jogo = new FormJogo(); // cria nova tela do jogo
+            jogo.Show(); // abre o jogo
+            this.Hide(); // esconde o menu (não fecha)
         }
 
         private void BTN_NIVEIS_Click_1(object sender, EventArgs e)
         {
-            FormNiveis niveis = new FormNiveis();
-            niveis.Show();
-            this.Hide();
+            FormNiveis niveis = new FormNiveis(); // abre tela de seleção de níveis
+            niveis.Show(); // mostra a tela
+            this.Hide(); 
         }
 
         private void BTN_SAIR_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); 
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+        
         }
     }
 }
